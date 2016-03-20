@@ -7,7 +7,7 @@ http://www.yiiframework.com/wiki/175/how-to-create-a-rest-api/
 class MainController extends Controller
 {
 	public $layout='main';
-	private $format = 'json';
+
   public function filters(){
     return array();
   }
@@ -27,7 +27,7 @@ class MainController extends Controller
   public function actionView(){
 		$out = array();
 		if(!isset($_GET['id'])){
-        throw new CHttpException(404,'The specified post cannot be found.');
+        throw new CHttpException(404, 'The specified post cannot be found.');
 		}
 		$model = Post::model()->findByPk($_GET['id']);
 		if(isset($model)){
@@ -36,6 +36,11 @@ class MainController extends Controller
 		echo json_encode($out);
   }
   public function actionCreate(){
+		$data = json_decode(file_get_contents('php://input'));
+		$model = new Post();
+		$model->content = $data->content;
+		$model->save();
+		echo json_encode(array('id'=>$model->attributes['id'], 'success'=>true));
   }
   public function actionUpdate(){
   }

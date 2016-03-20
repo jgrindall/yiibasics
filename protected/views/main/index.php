@@ -6,6 +6,6 @@
 	Yii::app()->getClientScript()->registerScriptFile($baseUrl.'/scripts/test.js', 1);
 ?>
 
-<button>Add</button>
+<button id='add'>Add</button>
 
-<button>Remove</button>
+<button id='remove'>Remove</button>
