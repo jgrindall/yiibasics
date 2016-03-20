@@ -20,6 +20,12 @@ return array(
 	),
 
 	'modules'=>array(
+		'gii'=>array(
+            'class'=>'system.gii.GiiModule',
+            'password'=>'password',
+            'newFileMode'=>0777,
+            'newDirMode'=>0777
+        )
 	),
 
 	// application components
@@ -33,11 +39,19 @@ return array(
 		// uncomment the following to enable URLs in path-format
 		'urlManager'=>array(
 			'urlFormat'=>'path',
-			'rules'=>array(
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>'
-			),
+	    'rules'=>array(
+					'gii'=>'gii',
+          'gii/<controller:\w+>'=>'gii/<controller>',
+          'gii/<controller:\w+>/<action:\w+>'=>'gii/<controller>/<action>',
+	        'post/<id:\d+>/<title:.*?>'=>'post/view',
+	        'posts/<tag:.*?>'=>'post/index',
+	        array('main/list', 'pattern'=>'main/<model:\w+>', 'verb'=>'GET'),
+	        array('main/view', 'pattern'=>'main/<model:\w+>/<id:\d+>', 'verb'=>'GET'),
+	        array('main/update', 'pattern'=>'main/<model:\w+>/<id:\d+>', 'verb'=>'PUT'),
+	        array('main/delete', 'pattern'=>'main/<model:\w+>/<id:\d+>', 'verb'=>'DELETE'),
+	        array('main/create', 'pattern'=>'main/<model:\w+>', 'verb'=>'POST'),
+	        '<controller:\w+>/<action:\w+>'=>'<controller>/<action>'
+	    )
 		),
 
 

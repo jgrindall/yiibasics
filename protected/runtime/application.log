@@ -21,3 +21,59 @@ Stack trace:
 #10 {main}
 REQUEST_URI=/bbtest/
 ---
+2016/03/20 19:18:18 [error] [php] include(Post.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:432)
+Stack trace:
+#0 /var/www/html/bbtest/protected/controllers/MainController.php(13): spl_autoload_call()
+#1 /var/www/yii/framework/web/actions/CInlineAction.php(49): MainController->actionList()
+#2 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/yii/framework/web/CController.php(286): MainController->runAction()
+#4 /var/www/yii/framework/web/CController.php(265): MainController->runActionWithFilters()
+#5 /var/www/yii/framework/web/CWebApplication.php(282): MainController->run()
+#6 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /var/www/html/bbtest/index.php(13): CWebApplication->run()
+REQUEST_URI=/bbtest/index.php/main/load
+in /var/www/html/bbtest/protected/controllers/MainController.php (13)
+in /var/www/html/bbtest/index.php (13)
+2016/03/20 19:24:37 [error] [php] include(Post.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:432)
+Stack trace:
+#0 /var/www/html/bbtest/protected/controllers/MainController.php(13): spl_autoload_call()
+#1 /var/www/yii/framework/web/actions/CInlineAction.php(49): MainController->actionList()
+#2 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/yii/framework/web/CController.php(286): MainController->runAction()
+#4 /var/www/yii/framework/web/CController.php(265): MainController->runActionWithFilters()
+#5 /var/www/yii/framework/web/CWebApplication.php(282): MainController->run()
+#6 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /var/www/html/bbtest/index.php(15): CWebApplication->run()
+REQUEST_URI=/bbtest/index.php/main/load
+in /var/www/html/bbtest/protected/controllers/MainController.php (13)
+in /var/www/html/bbtest/index.php (15)
+2016/03/20 19:24:50 [error] [php] include(Post.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:432)
+Stack trace:
+#0 /var/www/html/bbtest/protected/controllers/MainController.php(13): spl_autoload_call()
+#1 /var/www/yii/framework/web/actions/CInlineAction.php(49): MainController->actionList()
+#2 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/yii/framework/web/CController.php(286): MainController->runAction()
+#4 /var/www/yii/framework/web/CController.php(265): MainController->runActionWithFilters()
+#5 /var/www/yii/framework/web/CWebApplication.php(282): MainController->run()
+#6 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /var/www/html/bbtest/index.php(15): CWebApplication->run()
+REQUEST_URI=/bbtest/index.php/main/load
+in /var/www/html/bbtest/protected/controllers/MainController.php (13)
+in /var/www/html/bbtest/index.php (15)
+2016/03/20 19:26:36 [error] [php] include(Post.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:432)
+Stack trace:
+#0 /var/www/html/bbtest/protected/controllers/MainController.php(13): spl_autoload_call()
+#1 /var/www/yii/framework/web/actions/CInlineAction.php(49): MainController->actionList()
+#2 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/yii/framework/web/CController.php(286): MainController->runAction()
+#4 /var/www/yii/framework/web/CController.php(265): MainController->runActionWithFilters()
+#5 /var/www/yii/framework/web/CWebApplication.php(282): MainController->run()
+#6 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /var/www/html/bbtest/index.php(15): CWebApplication->run()
+REQUEST_URI=/bbtest/index.php/main/load
+in /var/www/html/bbtest/protected/controllers/MainController.php (13)
+in /var/www/html/bbtest/index.php (15)
