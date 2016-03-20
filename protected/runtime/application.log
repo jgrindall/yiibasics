@@ -77,3 +77,19 @@ Stack trace:
 REQUEST_URI=/bbtest/index.php/main/load
 in /var/www/html/bbtest/protected/controllers/MainController.php (13)
 in /var/www/html/bbtest/index.php (15)
+2016/03/20 20:09:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "post".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post')
+#1 /var/www/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /var/www/html/bbtest/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/bbtest/index.php/post
+---
+2016/03/20 20:10:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "post".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post')
+#1 /var/www/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /var/www/html/bbtest/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/bbtest/index.php/post
+---

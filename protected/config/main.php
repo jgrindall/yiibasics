@@ -43,14 +43,17 @@ return array(
 					'gii'=>'gii',
           'gii/<controller:\w+>'=>'gii/<controller>',
           'gii/<controller:\w+>/<action:\w+>'=>'gii/<controller>/<action>',
-	        'post/<id:\d+>/<title:.*?>'=>'post/view',
-	        'posts/<tag:.*?>'=>'post/index',
-	        array('main/list', 'pattern'=>'main/<model:\w+>', 'verb'=>'GET'),
-	        array('main/view', 'pattern'=>'main/<model:\w+>/<id:\d+>', 'verb'=>'GET'),
-	        array('main/update', 'pattern'=>'main/<model:\w+>/<id:\d+>', 'verb'=>'PUT'),
-	        array('main/delete', 'pattern'=>'main/<model:\w+>/<id:\d+>', 'verb'=>'DELETE'),
-	        array('main/create', 'pattern'=>'main/<model:\w+>', 'verb'=>'POST'),
-	        '<controller:\w+>/<action:\w+>'=>'<controller>/<action>'
+
+	        'post/<id:\d+>/<title:.*?>'=>'main/view',
+	        'posts/<tag:.*?>'=>'main/index',
+
+					array('main/list', 'pattern'=>'post', 'verb'=>'GET'),
+	        array('main/view', 'pattern'=>'post/<id:\d+>', 'verb'=>'GET'),
+	        array('main/update', 'pattern'=>'post/<id:\d+>', 'verb'=>'PUT'),
+	        array('main/delete', 'pattern'=>'post/<id:\d+>', 'verb'=>'DELETE'),
+	        array('main/create', 'pattern'=>'post', 'verb'=>'POST'),
+
+					'<controller:\w+>/<action:\w+>'=>'<controller>/<action>'
 	    )
 		),
 

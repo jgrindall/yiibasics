@@ -1,22 +1,16 @@
 var init = function(){
-  var PinModel = Backbone.Model.extend({
-    url:'/pin',
+  var PostModel = Backbone.Model.extend({
+    url:'/bbtest/index.php/post',
     defaults:{
-      "name":"John"
+      "contents":"contents.... etc..."
     }
   });
-  var PinsCollection = Backbone.Collection.extend({
-    url:'/pin',
-    model:PinModel
+  var PostsCollection = Backbone.Collection.extend({
+    url:'/bbtest/index.php/post',
+    model:PostModel
   });
 
-  var options = {
-    url:'index.php/main/load',
-    dataType:'json'
-  };
-  $.ajax(options);
-
-  var coll = new PinsCollection();
-  //coll.fetch();
+  var coll = new PostsCollection();
+  coll.fetch();
 };
 $(document).ready(init);
