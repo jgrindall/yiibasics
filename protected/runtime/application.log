@@ -115,3 +115,23 @@ Stack trace:
 REQUEST_URI=/bbtest/index.php/post
 in /var/www/html/bbtest/protected/controllers/MainController.php (42)
 in /var/www/html/bbtest/index.php (18)
+2016/03/20 23:25:02 [error] [php] Attempt to assign property of non-object (/var/www/html/bbtest/protected/controllers/MainController.php:40)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(286): MainController->runAction()
+#1 /var/www/yii/framework/web/CController.php(265): MainController->runActionWithFilters()
+#2 /var/www/yii/framework/web/CWebApplication.php(282): MainController->run()
+#3 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /var/www/html/bbtest/index.php(18): CWebApplication->run()
+REQUEST_URI=/bbtest/index.php/post
+in /var/www/html/bbtest/protected/controllers/MainController.php (40)
+in /var/www/html/bbtest/index.php (18)
+2016/03/26 22:10:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "post".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post')
+#1 /var/www/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /var/www/html/bbtest/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/bbtest/index.php/post
+HTTP_REFERER=http://localhost/bbtest/
+---

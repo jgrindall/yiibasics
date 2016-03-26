@@ -42,9 +42,20 @@ class MainController extends Controller
 		$model->save();
 		echo json_encode(array('id'=>$model->attributes['id'], 'success'=>true));
   }
-  public function actionUpdate(){
+  public function actionUpdate($id){
+		$data = json_decode(file_get_contents('php://input'));
+		$model = Post::model()->findByPk($id);
+		if($model){
+       	$model->content = $data->content;
+				$model->update();
+		}
+    echo json_encode(array('id'=>$id, 'success'=>true));
   }
-  public function actionDelete(){
+  public function actionDelete($id){
+		 $model = Post::model()->findByPk($id);
+		 if($model){
+			$model->delete();
+		 }
   }
 	public function actionIndex(){
 		$this->render('index');
